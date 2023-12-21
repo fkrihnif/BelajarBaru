@@ -1,20 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, {useState, useEffect} from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+  ScrollView,
+  FlatList,
+  Image,
+} from 'react-native';
 
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import ImgPemandangan from './images/1.jpeg';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
-      <Text style={{backgroundColor: '#8e44ad', padding: 20}}>
-        React Native Style
-      </Text>
+    <View>
+      <Image
+        source={ImgPemandangan}
+        style={{width: '100%', height: '50%'}}></Image>
+      <Image
+        source={{
+          uri: 'https://tokofikri.com/frontend/assets/images/fikri/logoputih.png',
+        }}
+        style={{width: '50%', height: '50%'}}></Image>
     </View>
   );
 }
